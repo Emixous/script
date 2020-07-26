@@ -1,0 +1,109 @@
+-- gui by emix script by silver
+local ScreenGui = Instance.new("ScreenGui")
+local emixinyarragi = Instance.new("Frame")
+local anaisim = Instance.new("TextLabel")
+local basla = Instance.new("TextButton")
+local dur = Instance.new("TextButton")
+local emixbaba = Instance.new("TextLabel")
+local actim = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+emixinyarragi.Name = "emixinyarragi"
+emixinyarragi.Parent = ScreenGui
+emixinyarragi.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+emixinyarragi.Position = UDim2.new(0.350189596, 0, 0.29880476, 0)
+emixinyarragi.Size = UDim2.new(0, 237, 0, 200)
+
+anaisim.Name = "ana isim"
+anaisim.Parent = emixinyarragi
+anaisim.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+anaisim.Size = UDim2.new(0, 186, 0, 50)
+anaisim.Text = "UMG PARA FARM"
+anaisim.TextColor3 = Color3.fromRGB(255, 255, 255)
+anaisim.TextSize = 14.000
+
+basla.Name = "basla"
+basla.Parent = emixinyarragi
+basla.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+basla.Position = UDim2.new(0, 0, 0.25, 0)
+basla.Size = UDim2.new(0, 118, 0, 100)
+basla.Text = "BAŞLAT"
+basla.TextColor3 = Color3.fromRGB(0, 0, 0)
+basla.TextSize = 14.000
+
+dur.Name = "dur"
+dur.Parent = emixinyarragi
+dur.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+dur.Position = UDim2.new(0.497890294, 0, 0.25, 0)
+dur.Size = UDim2.new(0, 119, 0, 100)
+dur.Text = "DURDUR"
+dur.TextColor3 = Color3.fromRGB(0, 0, 0)
+dur.TextSize = 14.000
+
+emixbaba.Name = "emix baba"
+emixbaba.Parent = emixinyarragi
+emixbaba.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+emixbaba.Position = UDim2.new(0, 0, 0.75, 0)
+emixbaba.Size = UDim2.new(0, 237, 0, 50)
+emixbaba.Text = "GUI BY EMIXOUS"
+emixbaba.TextColor3 = Color3.fromRGB(255, 255, 255)
+emixbaba.TextSize = 14.000
+
+actim.Name = "actim"
+actim.Parent = ScreenGui
+actim.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+actim.Position = UDim2.new(0, 0, 0.456175297, 0)
+actim.Size = UDim2.new(0, 54, 0, 43)
+actim.Text = "EMX"
+actim.TextColor3 = Color3.fromRGB(255, 255, 255)
+actim.TextSize = 14.000
+
+-- Scripts:
+
+local function RRXUDP_fake_script() -- basla.Script 
+	local script = Instance.new('Script', basla)
+
+	_G.bruh = true
+	while wait() do
+	    while _G.bruh == true do
+	        wait()
+	        pcall(function()
+	            game.Players.LocalPlayer.Character:BreakJoints()
+	        end)
+	        game.ReplicatedStorage.money:FireServer()
+	        game.ReplicatedStorage.respawn:FireServer()
+	    end
+	    pcall(function()
+	        workspace.CurrentCamera:ClearAllChildren()
+	        game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true);
+	        game.Workspace.CurrentCamera.CameraType = Enum.CameraType.Custom;
+	        game.Players.LocalPlayer.PlayerGui.DEAD:Destroy()
+	    end)
+	    pcall(function()
+	        game.ReplicatedStorage.money:FireServer()
+	        game.ReplicatedStorage.respawn:FireServer()
+	    end)
+	end
+end
+coroutine.wrap(RRXUDP_fake_script)()
+local function QOCKJ_fake_script() -- dur.Script 
+	local script = Instance.new('Script', dur)
+
+	_G.bruh = false
+end
+coroutine.wrap(QOCKJ_fake_script)()
+local function BHGUP_fake_script() -- actim.LocalScript 
+	local script = Instance.new('LocalScript', actim)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.Parent.emixinyarragi.Visible == false then
+			script.Parent.Parent.emixinyarragi.Visible = true 
+		else
+			script.Parent.Parent.emixinyarragi.Visible = false
+		end
+	end)
+end
+coroutine.wrap(BHGUP_fake_script)()
